@@ -25,7 +25,7 @@ function Map() {
   } = useGeolocation();
 
   const [mapLat, mapLng] = useUrlPosition();
-  console.log(cities);
+  // console.log(cities);
 
   useEffect(
     function () {

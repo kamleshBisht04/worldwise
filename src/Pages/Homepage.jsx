@@ -30,7 +30,7 @@ export default function Homepage() {
           <br /> <span>Travel smart. Travel Wise.</span>
         </h2>
 
-        <Link to="/app" className="cta">
+        <Link to="/login" className="cta">
           Start tracking how
         </Link>
       </section>
