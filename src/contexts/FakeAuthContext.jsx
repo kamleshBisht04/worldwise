@@ -28,8 +28,12 @@ function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(reducer, initalSatate);
 
   function login(email, password) {
-    if (email === FAKE_USER.email && password === FAKE_USER.password)
+    if (email === FAKE_USER.email && password === FAKE_USER.password) {
       dispatch({ type: "login", payload: FAKE_USER });
+      return true;
+    } else {
+      return false;
+    }
   }
 
   function logout() {
