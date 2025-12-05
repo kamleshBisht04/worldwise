@@ -4,7 +4,8 @@ import { createContext, useContext, useEffect } from "react";
 
 const CitiesContext = createContext();
 
-const BASE_URL = "http://localhost:8000";
+// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://6932821ee5a9e342d26f7b47.mockapi.io";
 
 const initialState = { cities: [], isLoading: false, currentCity: {}, error: "" };
 
@@ -50,6 +51,8 @@ function CitiesProvider({ children }) {
       dispatch({ type: "loading" });
       try {
         const res = await fetch(`${BASE_URL}/cities`);
+        // const res = await fetch(`/cities.json`);
+
         const data = await res.json();
         dispatch({ type: "cities/loaded", payload: data });
       } catch {
@@ -63,7 +66,7 @@ function CitiesProvider({ children }) {
   }, []);
 
   async function getCity(id) {
-    if (Number(id) === createCity.id) return;
+    // if (Number(id) === createCity.id) return;
     try {
       dispatch({ type: "loading" });
       const res = await fetch(`${BASE_URL}/cities/${id}`);
