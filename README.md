@@ -91,4 +91,4 @@ To run the project locally, follow these steps:
 
 - Integration with a real authentication service (OAuth or Firebase).
 - Adding features like city ratings, reviews, and sharing visited cities with friends.
-- Performance improvements for handling large datasets of cities.
+- Performance improvements for handling large datasets of cities..
